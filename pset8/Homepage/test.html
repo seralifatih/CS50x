@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>
+            Trivia on Roman Emperors
+        </title>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                let corrects = document.querySelectorAll('.correct');
+                for (let i = 0; i < corrects.length; i++) {
+                    corrects[i].addEventListener('click', function() {
+                        corrects[i].style.backgroundColor = 'green';
+                    });
+                }
+                });
+            document.addEventListener('DOMContentLoaded', function() {
+                let incorrects = document.querySelectorAll('.incorrect');
+                for (let i = 0; i < incorrects.length; i++) {
+                    incorrects[i].addEventListener('click', function() {
+                        incorrects[i].style.backgroundColor = 'red';
+                    });
+                }
+                });
+        </script>
+    </head>
+    <body>
+        <h2>Here you can test your knowledge on the Roman Emperors.</h2>
+        <ol>
+            <li>Whose reign lasted longest?</li>
+            <button class="incorrect">Caesar</button>
+            <button class="correct">Augustus</button>
+            <button class="incorrect">Caligula</button>
+            <button class="incorrect">Nero</button>
+            <br>
+            <br>
+            <li>Who founded the Roman Empire?</li>
+            <button class="incorrect">Trajan</button>
+            <button class="incorrect">Remus</button>
+            <button class="correct">Romulus</button>
+            <button class="incorrect">Tarquin</button>
+            <br>
+            <br>
+            <li>Who was the Cartagenian general that almost conquered Rome?</li>
+            <button class="incorrect">Hamilcar</button>
+            <button class="correct">Hannibal</button>
+            <button class="incorrect">Hasdrubal</button>
+            <button class="incorrect">Scipio</button>
+            <br>
+            <br>
+            <li>How long was a consul's term in the office?</li>
+            <button class="correct">One year</button>
+            <button class="incorrect">Two years</button>
+            <button class="incorrect">Three years</button>
+            <button class="incorrect">Five years</button>
+        </ol>
+    </body>
+</html>
