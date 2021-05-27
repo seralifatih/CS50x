@@ -1,0 +1,3 @@
+get integer from user
+check if the integer is between 1 and 8, if not go back to step 1
+outpot hashes based on the intereger
