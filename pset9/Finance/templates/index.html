@@ -1,0 +1,39 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Portfolio
+{% endblock %}
+
+{% block main %}
+
+    <div class="content-center">
+
+        {% if not stocks %}
+            <h4>You have no shares. Go <a href="{{ url_for('buy') }}">buy</a> some!</h4>
+        {% endif %}
+        {% if stocks %}
+    <table class= "table table-hover">
+        <tr>
+            <th>Symbol</th>
+            <th>Company</th>
+            <th>Shares</th>
+            <th>Current Price</th>
+            <th>TOTAL</th>
+        </tr>
+        {% for stock in stocks %}
+        <tr>
+            <td>{{ stock.symbol }}</td>
+            <td>{{ stock.company }}</td>
+            <td>{{ stock.quantity }}</td>
+            <td>{{ stock.cur_price }}</td>
+            <td>{{ stock.total }}</td>
+        </tr>
+        {% endfor %}
+        </table>
+        {% endif %}
+        <blockquote class="text-left">
+            <h5>Available cash: {{ cash }}</h4>
+            <h5>Portfolio value: {{ grand_total }}</h4>
+        </blockquote>
+    </div>
+{% endblock %}

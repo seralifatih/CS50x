@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    History
+{% endblock %}
+
+{% block main %}
+
+    <table class= "table table-hover">
+        <tr>
+            <th>Symbol</th>
+            <th>Action</th>
+            <th>Quantity</th>
+            <th>Date</th>
+            <th>TOTAL</th>
+        </tr>
+        {% for stocks in stocks %}
+        <tr>
+            <td>{{ stocks.symbol }}</td>
+            <td>{{ stocks.action }}</td>
+            <td>{{ stocks.quantity }}</td>
+            <td>{{ stocks.date }}</td>
+            <td>{{ stocks.total }}</td>
+        </tr>
+        {% endfor %}
+        </table>
+    </div>
+{% endblock %}
